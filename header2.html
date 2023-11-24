@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="header2.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <img src="img1.jpg" alt="" class="banner">
+            <a href="#" class="logo">DOODLE</a>
+            <div class="toggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Register</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2 class="heading">Home page begins here</h2>
+            <div class="sec1">
+                <h2>Doodle 1</h2>
+                <div class="card-container">
+
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="img1.jpg" alt="" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="" alt="doodling" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="img1.jpg" alt="" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                  
+                  </div>
+                
+            </div>
+            <div class="sec2">
+                <h2>Doodle 2</h2>
+                <div class="card-container">
+
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="img1.jpg" alt="" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="" alt="doodling" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="img1.jpg" alt="" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                  
+                  </div>
+                
+                
+            </div>
+            <div class="sec3">
+                <h2>Doodle 3</h2>
+                <div class="card-container">
+
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="img1.jpg" alt="" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="" alt="doodling" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        
+                        <div class="imgBox">
+                            <img src="img1.jpg" alt="" class="mouse">
+                        </div>
+                        
+                        <div class="contentBox">
+                            <h3>Doodling</h3>
+                            <h2 class="price">61.<small>98</small> €</h2>
+                            <a href="#" class="buy">Buy Now</a>
+                        </div>
+                    </div>
+                  
+                  </div>
+                
+
+            </div>
+            
+        </section>
+
+        <footer>
+            <p>Copyright &copy; 2023 <img src="" alt="logo"> All Rights Reserved.</p>
+        </footer>
+        <script>
+            window.addEventListener("scroll", function () {
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+            const navigation = document.querySelector('nav');
+            document.querySelector('.toggle').onclick = function () {
+                this.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+    </div>
+</body>
+
+</html>

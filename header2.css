@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body{
+    min-height: 1000px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    background: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+header.sticky{
+    height: 80px;
+}
+
+header .banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: 1s;
+}
+
+header.sticky .banner{
+    opacity: 0;
+}
+
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    color: #fff;
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+    z-index: 1;
+}
+
+header.sticky .logo{
+    position: absolute;
+    font-size: 2em;
+    left: 100px;
+    transform: translate(0, -50%);
+}
+nav{
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+header.sticky nav ul{
+    transform: translate(0);
+    opacity: 1;
+    transition-delay: 0.75s;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #ff275f;
+}
+
+section{
+    margin-top: 50vh;
+    padding: 50px;   
+    /* border-radius: 20%; */
+}
+
+section h2{
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+}
+
+section p{
+    font-size: 1.2em;
+}
+
+.sec1{
+    background-color: #857579;
+}
+.sec2{
+    background-color: #d61549;
+}
+.sec3{
+    background-color: #606a5f;
+}
+
+.sec1, .sec2, .sec3{
+    height: 620px;
+    width: 100%;
+    border-radius: 20px;
+    align-content: center;
+    justify-content: center;
+}
+
+.heading{
+    text-align: center;
+    padding: 100px;
+}
+
+@media (max-width: 991px){
+    section, header{
+        padding: 40px;
+    }
+    section h2{
+        font-size: 2em;
+    }
+    header.sticky .logo{
+        left: 40px;
+    }
+    header.sticky .banner{
+        opacity: 0;
+    }
+    nav ul{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav.active ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% -80px);
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* opacity: 1;
+        visibility: visible; */
+    }
+    header.sticky nav ul{
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul li a{
+        font-size: 1.5em;
+        padding: 5px 15px;
+    }
+    header.sticky .toggle{
+        position: fixed;
+        top: 15px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background: #fff url(menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .toggle.active{
+        background: #fff url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+
+.card-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    max-width: 250px;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Istok Web", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #212121; */
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #d1b855;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  content: "FATIMA";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+/*
+.card .imgBox img {
+    max-width: 100%;
+    
+    transition: .5s;
+}
+
+.card:hover .imgBox img {
+    max-width: 50%;
+      
+}
+*/
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #685f3b;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+background: #1A1E25;
+color: #868c96;
+width: 100%;
+}
+
+footer p {
+padding: 40px 0;
+text-align: center;
+}
+
+footer img {
+width: 44px;
+}
